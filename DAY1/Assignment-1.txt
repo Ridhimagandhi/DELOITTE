@@ -1,0 +1,48 @@
+                                                                          Assignment-1
+Q1) What are the popup boxes in javascript?
+
+Alert box, Confirm box, and Prompt box.
+
+Q2)What is JavaScript engine for Safari?
+
+JavaScriptCore
+
+Q5) What are the key differences between Java and JavaScript?
+
+-Java is an object-oriented programming language and JavaScript is a scripting language.
+-Js is used for creating interactive and dynamic web pages while java is used for static .
+-Java applications can run in any virtual machine(JVM) or browser while JavaScript code used to run only in the browser, but now it can run on the server via Node.js.
+-Java is mainly used for backend while Javascript is used for the frontend and backend both.
+-Java uses more memory and Javascript uses less memory.
+
+
+                                                                         Assignment-2
+
+Q1)Is it possible to disable JavaScript in browser? 
+
+yes, by Opening an internet browser and Clicking on the icon intended for either the control panel or settings then Look into advanced options for privacy and security. Locate the JavaScript module and toggle the switch off.
+
+Q2) What is the difference between undefined and not defined in JavaScript?
+
+undefined	
+when we declared a variable in the code but did not assign the value before printing the variable value	
+not defined
+when we did not declare the variable and try to call that variable.
+
+Q3)Difference between ==  and ===?
+
+equality operators like double equals (==) and triple equals (===) both are used to compare two values.Double equals (==) will try to convert the values to the same data type and then try to compare them. But triple equals (===) strictly compares the value and the datatype.
+
+Q4)What does the isNaN() function?
+
+isNaN() returns true if a number is Not-a-Number.
+
+Q5) Difference between Client side JavaScript and Server side JavaScript?
+
+-In Client-side scripting, Source code is visible to the user and in Server side js Source code is not visible to the user because its output 
+of server-side is an HTML page.
+-csjs main function is to provide the requested output to the end user.In ssjs Its primary function is to manipulate and provide access to the respective database as per the request.
+-csjs runs on the user’s computer while ssjs runs on the webserver.
+-csja It does not provide security for data while ssjs provides more security for data.
+-csjs example are HTML, CSS, and javascript are used while for ssjs its PHP, Python, Java, Ruby are used.
+
