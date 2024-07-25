@@ -1,0 +1,11 @@
+Assignment
+
+Q4.  What is BOM?  DOM?   Diff.  between BOM vs DOM? 
+
+DOM: Objects that have to do with the currently loaded page 
+BOM: Objects that deal with everything outside the page.
+
+
+-Dom mainly focuses on the structure of the displayed document while bom mainly focuses on browser-specific functionality. 
+-In Dom, when an HTML document gets loaded in the browser, then it becomes a document object while In Bom this case, the window object will be created automatically by the browser.
+-Dom provides direct access control to the content of the web document, along with permitting the traversal and modification of its elements and attributes while Bom doesn’t have any access to the content of the web document directly.
