@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mathematical Operations</h1>
+    <hr/>
+    First Number:<input type="number" id="first"><br><br>
+    Second Number:<input type="number" id="sec"><br><br>
+    <input type="button" onclick="add()" value="Add">
+    <input type="button" onclick="sub()" value="Sub">
+    <input type="button" onclick="mul()" value="Multiply">
+    <p id="ans"> 
+    </p>
+    <script>
+        
+        var fn=document.getElementById("first");
+        var sn=document.getElementById("sec");
+        function add(){
+            var fn=parseInt(document.getElementById("first").value);
+        var sn=parseInt(document.getElementById("sec").value);
+            var result=fn+sn;
+            ans.innerHTML=result;
+            
+        }
+        function sub(){
+            var result=fn.value-sn.value;
+            ans.innerHTML=result;
+              
+        }
+        function mul(){
+            var result=fn.value*sn.value;
+            ans.innerHTML=result;
+            
+        }
+    </script>
+
+</body>
+</html>
