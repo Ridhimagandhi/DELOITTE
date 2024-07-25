@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    Product Name: <input type="text " id="prod"><br><br>
+    Unit Price:<input type="number" id="unit"><br><br>
+    Quantity:<input type="number" id="quan"><br><br>
+    <input type="button" onclick="total()" value="Get Total">  
+    <p id="mess"></p>  
+    <script>
+        function total(){
+        window.confirm("do u want to continue");
+        var pro=document.getElementById("prod");
+        var uni=document.getElementById("unit");
+        var qua=document.getElementById("quan");
+
+        var ans=0;
+        if(qua.value>10){
+           ans= uni.value*qua.value;
+            ans=ans-(ans*0.1);
+           mess.innerHTML=ans;
+        }
+        else if(qua.value>15){
+            ans= uni.value*qua.value;
+            ans=ans-(ans*0.15);
+           mess.innerHTML=ans;
+        }
+        else if(qua.value>20){
+            ans= uni.value*qua.value;
+            ans=ans-(ans*0.2);
+           mess.innerHTML=ans;
+        }
+        else{
+            ans= uni.value*qua.value;
+            mess.innerHTML=ans;
+        }
+        }
+    </script>
+</body>
+</html>
