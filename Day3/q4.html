@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Cost Calculator</title>
+</head>
+<body>
+    <h1>Meal Cost Calculator</h1>
+    <label for="mealPrice">Enter the base cost of the meal:</label>
+    <input type="number" id="mealPrice" required><br>
+    <button onclick="calculateTotalCost()">Calculate Total Cost</button>
+
+    <h2>Cost Details:</h2>
+    <div id="details" style="font-family: Arial, sans-serif;"></div>
+
+    <script>
+        function calculateTotalCost() {
+            const mealPrice = parseFloat(document.getElementById('mealPrice').value);
+            
+            const costDetails = calculateCostDetails(mealPrice);
+
+            const detailsDiv = document.getElementById('details');
+            detailsDiv.innerHTML = `
+                <p>Base Cost of the Meal: ${costDetails.mealBaseCost.toFixed(2)}</p>
+                <p>Tip Amount (10%): ${costDetails.tipAmount.toFixed(2)}</p>
+                <p>Tax Amount (8%): ${costDetails.taxAmount.toFixed(2)}</p>
+                <p>Total Amount: ${costDetails.totalAmount.toFixed(2)}</p>
+            `;
+        }
+
+        function calculateCostDetails(mealBaseCost) {
+            const tipAmount = mealBaseCost * 0.10;
+            const taxAmount = mealBaseCost * 0.08;
+            const totalAmount = (mealBaseCost + tipAmount + taxAmount);
+
+            return {
+                mealBaseCost: mealBaseCost,
+                tipAmount: tipAmount,
+                taxAmount: taxAmount,
+                totalAmount: totalAmount
+            };
+        }
+    </script>
+</body>
+</html>
