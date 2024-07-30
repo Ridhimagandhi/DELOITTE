@@ -69,8 +69,8 @@
 
         function dlt_users() {
       
-            let uid = parseInt(document.getElementById("getID").value);
-            let tableObj = document.getElementById("myTable");
+            let uid = parseInt(document.getElementById("id1").value);
+            let tableObj = document.getElementById("table1");
             Data = Data.filter(item => item.id !== uid);
             while (tableObj.rows.length > 1) {
                 tableObj.deleteRow(1);
