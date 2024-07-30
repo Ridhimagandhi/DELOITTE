@@ -3,14 +3,12 @@
 <head></head>
 
 <body>
-    <h3>JavaScript Programming </h3>
-    <hr />
-
-
+ 
     <input type="button" value="Show Users" onclick="users()" />
     <br><br>
     <input type="number" placeholder="Enter Id" id="id1">
-    
+    <input type="button" value="Remove Users" onclick="dlt_users()" />
+
     <br /><br />
     <table id="table1" border="2" width="500" cellpadding="10" cellspacing="0">
         <tr>
@@ -68,6 +66,22 @@
                 "avatar": "https://reqres.in/img/faces/6-image.jpg"
             },
         ];
+
+        function dlt_users() {
+            var inputId = document.getElementById("id1").value; // Get the user ID from the input field
+            var table = document.getElementById("table1");
+            var rowCount = table.rows.length;
+
+            for (var i = 1; i < rowCount; i++) {
+                var row = table.rows[i];
+                var rowData = row.cells[0].innerHTML;
+                if (rowData == inputId) {
+                    table.deleteRow(i);
+                     return;
+                }
+            }
+            alert("User with ID " + inputId + " not found.");
+        }
 
         function users() {
             let i = 1;
