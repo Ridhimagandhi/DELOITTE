@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="show" onclick="show()" style="width: 100px; font-size: larger; background-color: brown;">
+    <div id="data"></div>
+    <script>
+        class BankAccount {
+            constructor(AccNumber, Name, City, PhoneNumber) {
+                this.AccNumber = AccNumber;
+                this.Name = Name;
+                this.City = City;
+                this.Email = null; 
+                this.PhoneNumber = PhoneNumber;
+            }
+        }
+
+        class FdaAcc extends BankAccount {
+            constructor(AccNumber, Name, City, PhoneNumber, FDAmount, InterestRate = 8.5, Duration = 12) {
+                super(AccNumber, Name, City, PhoneNumber);
+                this.FDAmount = FDAmount;
+                this.InterestRate = InterestRate;
+                this.Duration = Duration;
+            }
+        }
+
+        let myFdaAcc = new FdaAcc("1222", "Ridhima", 3000);
+
+        function show() {
+            let divv = document.getElementById("data");
+            divv.innerHTML = `
+                <p>Account Number: ${myFdaAcc.AccNumber}</p>
+                <p>Name: ${myFdaAcc.Name}</p>
+                <p>Fixed Deposit Amount: ${myFdaAcc.FDAmount}</p>
+                <p>Interest Rate: ${myFdaAcc.InterestRate}%</p>
+                <p>Duration: ${myFdaAcc.Duration} months</p>
+            `;
+        }
+    </script>
+</body>
+</html>
