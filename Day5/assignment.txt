@@ -1,0 +1,20 @@
+assignment
+
+Q1) What is setInterval()  and setTimeout() methods in JavaScript?
+
+setTimeout(function, milliseconds)
+Executes a function, after waiting a specified number of milliseconds.
+
+setInterval(function, milliseconds)
+Same as setTimeout(), but repeats the execution of the function continuously.
+
+Q2) What are promisees in JavaScript? Why do we use? 
+
+The Promise object supports two properties: state and result.
+
+While a Promise object is "pending" (working), the result is undefined.
+
+When a Promise object is "fulfilled", the result is a value.
+
+When a Promise object is "rejected", the result is an error object.
+
