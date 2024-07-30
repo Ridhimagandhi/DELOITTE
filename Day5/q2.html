@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Friend details</legend>
+        Friends name <input type="text" id="name"><br><br>
+        Contact Number <input type="text" id="num"><br><br>
+        <input type="button" value="add friend" onclick="addfriend()"><br>
+        <p id="p2"></p>
+        <input type="button" value="get contact number" onclick="getcontact()">
+        <p id="p1"></p>
+    </fieldset>
+    <script>
+        var newmap=new Map();
+        function addfriend(){
+            let friend=document.getElementById("name").value;
+            let contact=document.getElementById("num").value;
+            newmap.set(friend, contact);
+            document.getElementById("p2").innerHTML = "Friend added";
+        }
+        function getcontact() {
+            let friend=document.getElementById("name").value;
+            let contact = newmap.get(friend);
+            if(contact) {
+                document.getElementById("p1").innerHTML = contact;
+            }
+            else {
+                document.getElementById("p1").innerHTML = "No friend found";
+            }
+        }
+    </script>
+</body>
+</html>
