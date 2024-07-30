@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body><br>
+    <input type="text" placeholder=" id" id="id">
+    <input type="text" placeholder="Employee name" id="name">
+    <input type="text" placeholder="Job" id="skill">
+    <input type="text" placeholder="salary" id="salary">
+    <input type="button" value="add to table" onclick="add()"><br><br><br>
+    <table id="table" border="3px" cellpadding="24px" width="500px">
+        <tr>
+            <td> <b>S.no</td>
+            <td> <b>student name</td>
+            <td><b>skillset</td>
+                <td><b>Salary</td>
+        </tr></b>
+    </table>
+    <script>
+        function add() {
+            var table = document.getElementById("table");
+            var id = document.getElementById("id");
+            var name = document.getElementById("name");
+            var skill = document.getElementById("skill");
+            var salary=document.getElementById("salary");
+
+            var row = table.insertRow(-1);
+            var cellObj1 = row.insertCell(0);
+            var cellObj2 = row.insertCell(1);
+            var cellObj3 = row.insertCell(2);
+            var cellObj4 = row.insertCell(3);
+
+            
+					cellObj1.innerHTML =  id.value;
+					cellObj2.innerHTML =   name.value;
+					cellObj3.innerHTML =   skill.value;
+                    cellObj4.innerHTML =   salary.value;
+
+            
+        }
+
+    </script>
+</body>
+
+</html>
