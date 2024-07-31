@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+prod name <input type="text" id="prod"><br><br>
+Unit price <input type="text" id="unit"><br><br>
+
+Quantity <input type="text" id="qty"><br><br>
+<button id="calculate">total</button>
+<div id="output"></div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#calculate").click(function(){
+                var prodName=$('#prod').val();
+                var unitPrice=parseInt($('#unit').val());
+                var quantity=parseInt($('#qty').val());
+
+                if(quantity<=0){
+                    alert('quantity cannot be negative');
+                    return;
+                }
+                var total = unitPrice * quantity;
+
+                
+                if (quantity > 30) {
+                    total =total-(total*0.15); 
+                } else if (quantity > 20) {
+                    total =total-(total*0.10); 
+                } else if (quantity > 10) {
+                    total =total-(total*0.05); 
+                }
+
+                var ans="INR." + total.toFixed(2);
+                $('#output').html(`<p>Toatal amaount for ${prodName}:${ans}</p>`);
+            });
+        });
+    </script>
+</body>
+</html>
