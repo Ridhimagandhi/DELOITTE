@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>Input String : <input type="text" id="txt"> 
+        <br><br>
+    <button>GET DATA</button></p>
+    <ul id="List"></ul>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                let data = $("#txt").val();
+                let str = data.split(',');
+                for(let item of str) {
+                    $("#List").append(`<li>${item}</li>`);
+                }
+            })
+        })
+    </script>
+</body>
+</html>
