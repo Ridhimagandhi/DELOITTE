@@ -1,0 +1,22 @@
+Assignment
+
+1.  How to apply multiple css properties to html tags in jquery?
+
+$("p").css({"background-color": "yellow", "font-size": "200%"});
+
+2.  How to add/remove css class to html tags in jquery?
+
+$("button").click(function(){
+  $("h1, h2, p").addClass("blue");
+  $("div").addClass("important");
+});
+
+$("button").click(function(){
+  $("h1, h2, p").removeClass("blue");
+});
+Syntax
+$(selector).removeClass(classname,function(index,currentclass))
+
+3.  What is regular expressions in JavaScript?  How to use regular expressions in JavaScript?
+
+Regular expressions (Regex) are a way of describing patterns in a string of data, which allows you to search for data strings, like email addresses or passwords, that match that pattern.
